@@ -1,0 +1,6 @@
+# Placeholder redirect map (T-PORT-02).
+# /dashboard/ is the copy-deck sign-in target; the real customer dashboard
+# lives on the platform (https://www.lucaexpress.com/billing/me) behind
+# magic-link auth. Until that handoff is wired at G5, route /dashboard/
+# to the storefront's magic-link sign-in page.
+/dashboard/* /signin/ 302

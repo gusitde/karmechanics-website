@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start Your 7-Day Free Trial — KarMechanics</title>
+  <meta name="description" content="Pick a plan — Live Answer $20/mo, After-Hours $10/mo, or Missed-Call Text-Back $5/mo. 7-day free trial, card required, cancel anytime.">
+  <link rel="canonical" href="https://karmechanics.com/signup/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KarMechanics">
+  <meta property="og:url" content="https://karmechanics.com/signup/">
+  <meta property="og:title" content="Start your 7-day free trial">
+  <meta property="og:description" content="Live Answer $20/mo · After-Hours $10/mo · Missed-Call Text-Back $5/mo. Card required, nothing charged until day 8.">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/assets/km.css">
+  <script src="/assets/km.js" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="KarMechanics — home">
+        <img class="brand-mark" src="/favicon.svg" alt="" width="28" height="28">
+        <span>KarMechanics</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="/#how-it-works">How it works</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/dashboard/">Sign in</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+
+      <section class="page-head">
+        <h1>Pick a plan. Start your trial.</h1>
+        <p class="intro">7 days free on every plan. Card required, nothing charged until day 8. Cancel from your dashboard anytime.</p>
+      </section>
+
+      <!-- Post-checkout: success (?state=success&session_id=...) -->
+      <section class="panel" data-panel="success" hidden>
+        <h2>You're in.</h2>
+        <p>Check your inbox — your sign-in link and setup instructions are on the way. First job: forward your shop line. It's in the email.</p>
+        <p class="form-msg is-err" data-error="provision-failed" hidden aria-live="polite">Something went wrong. Try again — or email <a href="mailto:gus@gusit.de">gus@gusit.de</a> and a human will sort it out.</p>
+        <a class="btn btn-primary" href="/dashboard/">Go to your dashboard</a>
+      </section>
+
+      <!-- Post-checkout: cancel (?state=cancel) -->
+      <section class="panel" data-panel="cancel" hidden>
+        <h2>Checkout canceled.</h2>
+        <p>Your card wasn't charged. Your plan choice is saved on this page whenever you're ready.</p>
+        <a class="btn btn-ghost" href="/#pricing">Back to pricing</a>
+      </section>
+
+      <section data-signup-section>
+        <div class="price-region" data-price-region data-interval="monthly">
+          <div class="billing-toggle" role="group" aria-label="Billing period">
+            <button type="button" class="toggle-btn" data-billing-toggle="monthly" aria-pressed="true">Monthly</button>
+            <button type="button" class="toggle-btn" data-billing-toggle="annual" aria-pressed="false">Annual <span class="badge">2 months free</span></button>
+          </div>
+
+          <form class="form-card" data-signup-form data-msg-sending="One sec…" method="post" action="/signup/">
+            <p class="form-legend">* Required field</p>
+
+            <fieldset class="plan-picker">
+              <legend class="sr-only">Pick a plan.</legend>
+              <label class="plan-option">
+                <input type="radio" name="plan" value="km_live" checked>
+                <span class="plan-option-body">
+                  <span class="plan-option-head">
+                    <span class="plan-option-name">Live Answer</span>
+                    <span class="plan-option-price"><span class="price-monthly" data-plan-price-monthly="km_live">$20/mo</span><span class="price-annual" data-plan-price-annual="km_live">$200/yr</span></span>
+                  </span>
+                  <span class="plan-option-sub">24/7 answering · 100 min/mo</span>
+                </span>
+              </label>
+              <label class="plan-option">
+                <input type="radio" name="plan" value="km_after_hours">
+                <span class="plan-option-body">
+                  <span class="plan-option-head">
+                    <span class="plan-option-name">After-Hours Answer</span>
+                    <span class="plan-option-price"><span class="price-monthly" data-plan-price-monthly="km_after_hours">$10/mo</span><span class="price-annual" data-plan-price-annual="km_after_hours">$100/yr</span></span>
+                  </span>
+                  <span class="plan-option-sub">Nights, weekends, holidays · 100 min/mo</span>
+                </span>
+              </label>
+              <label class="plan-option">
+                <input type="radio" name="plan" value="km_missed_call">
+                <span class="plan-option-body">
+                  <span class="plan-option-head">
+                    <span class="plan-option-name">Missed-Call Text-Back</span>
+                    <span class="plan-option-price"><span class="price-monthly" data-plan-price-monthly="km_missed_call">$5/mo</span><span class="price-annual" data-plan-price-annual="km_missed_call">$50/yr</span></span>
+                  </span>
+                  <span class="plan-option-sub">SMS only, no AI voice</span>
+                </span>
+              </label>
+            </fieldset>
+
+            <div class="field">
+              <label for="signup-email">Email *</label>
+              <input id="signup-email" name="email" type="email" placeholder="you@yourshop.com" autocomplete="email" required>
+              <p class="field-error" id="signup-email-error" hidden>Please enter a valid email address.</p>
+            </div>
+
+            <div class="turnstile-slot" data-turnstile></div>
+
+            <p class="form-msg is-err" data-error="generic" hidden aria-live="polite">Something went wrong. Try again — or email <a href="mailto:gus@gusit.de">gus@gusit.de</a> and a human will sort it out.</p>
+
+            <button class="btn btn-primary btn-lg" type="submit">Start 7-day free trial</button>
+
+            <p class="form-note">We ask for a card to keep trials honest and toll-fraudsters off the line. You won't be charged until your trial ends — and canceling takes two clicks, not a phone call. Trial voice minutes are capped at 25.</p>
+            <p class="form-microcopy">Payment is handled by Stripe's secure checkout. We never see or store your card number.</p>
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-tagline">KarMechanics — your shop's phone, answered.</p>
+          <p class="footer-demo">Hear it yourself: <a href="tel:[[DEMO-NUMBER]]">[[DEMO-NUMBER]]</a></p>
+        </div>
+        <nav class="footer-col" aria-label="Legal">
+          <h2 class="footer-heading">Legal</h2>
+          <ul>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-meta">
+        <p>Calls are answered by an AI assistant with an automatic recording disclosure. No contracts — cancel anytime from your dashboard.</p>
+        <p>Built and operated by Gus IT LLC — NVIDIA Inception member with an enterprise-infrastructure background.</p>
+        <p>KarMechanics is a product of Gus IT LLC, a Florida (USA) limited liability company.</p>
+        <p><a href="mailto:gus@gusit.de">gus@gusit.de</a></p>
+        <p>© 2026 Gus IT LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in to KarMechanics</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/assets/km.css">
+  <script src="/assets/km.js" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="KarMechanics — home">
+        <img class="brand-mark" src="/favicon.svg" alt="" width="28" height="28">
+        <span>KarMechanics</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="/#how-it-works">How it works</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn-primary btn-nav" href="/signup/">Start free trial</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+
+      <section class="page-head">
+        <h1>Sign in to KarMechanics</h1>
+        <p class="intro">No passwords here. Enter the email you signed up with and we'll send you a sign-in link.</p>
+      </section>
+
+      <section class="prose">
+        <form class="form-card" data-signin-form data-msg-sending="One sec…" method="post" action="/signin/">
+          <p class="form-legend">* Required field</p>
+
+          <div class="field">
+            <label for="signin-email">Email *</label>
+            <input id="signin-email" name="email" type="email" placeholder="you@yourshop.com" autocomplete="email" required>
+            <p class="field-error" id="signin-email-error" hidden>Please enter a valid email address.</p>
+          </div>
+
+          <div class="turnstile-slot" data-turnstile></div>
+
+          <p class="form-msg is-err" data-error="unknown-email" hidden aria-live="polite">That email isn't on a plan. Use the address you signed up with — or <a href="/signup/">start a free trial</a>.</p>
+          <p class="form-msg is-err" data-error="generic" hidden aria-live="polite">Something went wrong. Try again — or email <a href="mailto:gus@gusit.de">gus@gusit.de</a> and a human will sort it out.</p>
+
+          <button class="btn btn-primary" type="submit">Email me a sign-in link</button>
+        </form>
+
+        <p class="form-msg is-ok panel" data-state="sent" hidden aria-live="polite">Link sent — check your inbox. It's good for 15 minutes.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-tagline">KarMechanics — your shop's phone, answered.</p>
+          <p class="footer-demo">Hear it yourself: <a href="tel:[[DEMO-NUMBER]]">[[DEMO-NUMBER]]</a></p>
+        </div>
+        <nav class="footer-col" aria-label="Legal">
+          <h2 class="footer-heading">Legal</h2>
+          <ul>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-meta">
+        <p>Calls are answered by an AI assistant with an automatic recording disclosure. No contracts — cancel anytime from your dashboard.</p>
+        <p>Built and operated by Gus IT LLC — NVIDIA Inception member with an enterprise-infrastructure background.</p>
+        <p>KarMechanics is a product of Gus IT LLC, a Florida (USA) limited liability company.</p>
+        <p><a href="mailto:gus@gusit.de">gus@gusit.de</a></p>
+        <p>© 2026 Gus IT LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
